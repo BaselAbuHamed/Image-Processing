@@ -284,7 +284,6 @@ def find_best_matching_strip(image_path, cropped_strip_path):
 
     return best_matching_strip
 
-
 imagePath = "photos/lena.jpg"
 
 grayScaleImagePath=convert2GrayScale(imagePath)
