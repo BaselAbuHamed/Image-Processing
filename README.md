@@ -38,9 +38,69 @@ To use the project, follow these steps:
     ```bash
     python main.py
 
+***
 
-## Getting Started
+# Example Images
 
-To get started with the project, follow these instructions:
+1. **Original Image:**
+   
+This is the original input image used for image processing tasks.
+
+![lena](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/97f92bfa-15f4-4cfa-b659-47ec0884080b)
 
 
+2. **Greyscale Image**:
+
+This image shows the result of converting the original image to grayscale.
+
+![gray_image](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/d24dff8d-829f-452f-910b-a35f8d07076f)
+
+3. **Binary Image:**
+
+This image displays the result of converting the grayscale image to binary using thresholding.
+
+![binary_image](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/c9fe3016-1d87-4bd1-bcb6-d0f64239487f)
+
+
+4. **Resized Image:**
+
+ This image shows the result of resizing the original image to the specified dimensions.
+
+![resize_Image](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/7244c41e-7f9a-41bb-9cda-3b4011a70c08)
+
+5. **Enhanced Image:**
+
+This image displays the result of enhancing the contrast of the grayscale image using histogram equalization.
+
+![C](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/298972dc-2dc0-41b9-b525-354b503d6994)
+
+6. **Flipped Image:**
+
+This image shows the result of flipping the grayscale image horizontally.
+
+![flipped](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/5e446607-c77e-4df2-b241-50956feedbac)
+
+7. **Blurred Image:**
+
+This image displays the result of applying a blur filter to the grayscale image.
+
+![blured](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/7ad0cb4e-766c-4d0a-aa59-607bf4463247)
+
+
+8. **Negative Image:**
+
+This image shows the result of generating a negative image by inverting the intensity values of the grayscale image.
+
+![negative](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/56d02826-6df6-481a-86cb-91a004dfa846)
+
+9. **Cropped Image:**
+
+This image displays a cropped region of the original image.
+
+![cropped_image](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/fd883a78-432e-4bb4-a145-e727c2e81204)
+
+10. **Best Matching Strip:**
+
+This image shows the best matching strip found in the original image based on histogram similarity.
+
+![best_matching_strip_image](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/42e1eb4b-4e79-4e1f-968a-a2625221b381)
