@@ -264,28 +264,33 @@ def find_best_matching_strip(image_path, cropped_strip_path):
         print("Error: Unable to read the original grayscale image.")
         return None
 
-    # Initialize variables to store the best matching strip and its similarity score
+    # Initialize variables to store best matching strip and its similarity score
     best_matching_strip = None
     best_matching_score = -1  # Initialize with a low value
 
-    # Iterate through each vertical strip in the image and compare histograms
+    # Iterate through each vertical strip in image and compare histograms
     max_y, max_x = gray_image.shape  # Get only height and width
-    for x in range(max_x):
+    for x in range(max_x - cropped_strip.shape[1] + 1):  # Adjust the range for x
         # Extract the current vertical strip
-        current_strip = gray_image[:, x:x+cropped_strip.shape[1]]  # Use cropped_strip's width
+        current_strip = gray_image[:, x:x+cropped_strip.shape[1]]
 
-        # Compute the histogram of the current strip
+        # Compute histogram of the current strip
         hist_current_strip = compute_histogram(current_strip)
 
         # Compute histogram similarity (using intersection for simplicity)
         similarity = cv.compareHist(hist_cropped_strip, hist_current_strip, cv.HISTCMP_INTERSECT)
 
-        # Update the best matching strip and score if similarity is higher
+        # Update best matching strip and score if similarity is higher
         if similarity > best_matching_score:
             best_matching_score = similarity
             best_matching_strip = current_strip
 
-    return best_matching_strip
+    # Write best matching strip to a file
+    best_matching_strip_path = "photos/best_matching_strip_image.jpg"
+    cv.imwrite(best_matching_strip_path, best_matching_strip)
+
+    return best_matching_strip_path
+
 
 imagePath = "photos/lena.jpg"
 
@@ -329,6 +334,7 @@ cv.imshow("Cropped Image", cropped_image)
 
 cropped_strip_path = crop_image(grayScaleImagePath, x, y, w, h)
 best_matching_strip = find_best_matching_strip(grayScaleImagePath, cropped_strip_path)
+best_matching_strip = cv.imread(best_matching_strip)
 cv.imshow("Best Matching Strip", best_matching_strip)
 
 calculate_and_show_metrics(grayScaleImagePath)
