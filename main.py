@@ -112,26 +112,29 @@ def show_metrics(mean_intensity, std_deviation, entropy, histogram, normalized_h
     # Plot histogram
     plt.figure(figsize=(15, 5))
     plt.subplot(1, 3, 1)
-    plt.plot(histogram)
+    # plt.plot(histogram)
+    plt.bar(np.arange(256), histogram, color='gray')
     plt.title("Histogram")
     plt.xlabel("Intensity level")
     plt.ylabel("Frequency")
 
     # Plot normalized histogram
     plt.subplot(1, 3, 2)
-    plt.plot(normalized_histogram)
+    # plt.plot(normalized_histogram)
+    plt.bar(np.arange(256), normalized_histogram, color='gray')
     plt.title("Normalized Histogram")
     plt.xlabel("Intensity level")
     plt.ylabel("Probability")
 
     # Plot cumulative histogram
     plt.subplot(1, 3, 3)
-    plt.plot(cumulative_histogram, color='black')
+    # plt.plot(cumulative_histogram, color='black')
+    plt.bar(np.arange(256), cumulative_histogram, color='black')
     plt.title("Cumulative Histogram")
     plt.xlabel("Intensity level")
     plt.ylabel("Cumulative Frequency")
 
-    plt.tight_layout()
+    # plt.tight_layout()
     plt.show()
 
 def calculate_and_show_metrics(image_path):
