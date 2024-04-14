@@ -104,3 +104,25 @@ This image displays a cropped region of the original image.
 This image shows the best matching strip found in the original image based on histogram similarity.
 
 ![best_matching_strip_image](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/42e1eb4b-4e79-4e1f-968a-a2625221b381)
+
+***
+
+# Histogram, Normalized Histogram, and Cumulative Histogram
+
+In image processing, a histogram is a graphical representation of the distribution of pixel intensity values in an image. It provides valuable insights into the tonal distribution of an image, which can be useful for various analysis and enhancement tasks. The histogram typically plots the frequency of occurrence of each intensity level (ranging from 0 to 255 for 8-bit images) along the horizontal axis against the corresponding number of pixels having that intensity level along the vertical axis.
+
+## Histogram Calculation
+
+To compute a histogram for an image, we iterate through each pixel and increment the corresponding bin in the histogram array. For grayscale images, the histogram will have 256 bins, each representing an intensity level from 0 to 255.
+
+## Normalized Histogram
+
+The normalized histogram is obtained by dividing the frequency of each intensity level by the total number of pixels in the image. This normalization ensures that the sum of all bin values in the histogram equals 1, representing the probability distribution of pixel intensities.
+
+## Cumulative Histogram
+
+The cumulative histogram (also known as the cumulative distribution function) is derived from the normalized histogram. It represents the cumulative sum of frequencies up to each intensity level. The cumulative histogram provides information about the cumulative distribution of pixel intensities in an image, which can be useful for tasks such as contrast stretching and histogram equalization.
+
+![hist+norm+cumu](https://github.com/BaselAbuHamed/Image-Processing/assets/107325485/e8ed5313-8ce6-4d54-8934-0505b2f16443)
+
+By understanding histograms, normalized histograms, and cumulative histograms, image processing practitioners can gain valuable insights into the characteristics of images and perform a wide range of enhancement and analysis tasks effectively.
